@@ -7,27 +7,42 @@
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
   <link rel="stylesheet" href="dist/output.css">
 </head>
-<body>
-
-  Stay updated!
-
-  Join 60,000+ product managers receiving monthly updates on:
-
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
-
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter
-
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<body class="d-grid">
+  <main class="container-sm bg-white p-0">
+    <div class="row m-0 p-0">
+      <picture class="p-0 mx-auto w-auto">
+        <source srcset="assets/images/illustration-sign-up-desktop.svg" media="(min-width:768px)">
+        <img src="assets/images/illustration-sign-up-mobile.svg" alt="" class="img-fluid">
+      </picture>
+      <section class="p-4 d-flex flex-column gap-2">
+        <h1>
+          Stay updated!
+        </h1>
+        <div>
+          <div>
+            <p>
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
+            <ul class="d-flex flex-column gap-2 my-4">
+              <li><img src="assets/images/icon-list.svg" alt=""><div>Product discovery and building what matters</div></li>
+              <li><img src="assets/images/icon-list.svg" alt=""><div>Measuring to ensure updates are a success</div></li>
+              <li><img src="assets/images/icon-list.svg" alt=""><div>And much more!</div></li>
+            </ul>
+          </div>
+        </div>
+        <form action="#" class="d-flex flex-column mt-2">
+          <div class="d-flex flex-column gap-2">
+            <label for="email">
+              Email address
+            </label>
+            <input type="email" name="email" id="email" placeholder="email@company.com" required class="rounded-3 border border-grey">
+          </div>
+          <input type="submit" value="Subscribe to monthly newsletter" class="bg-dark-slate-grey text-white fw-bold rounded-3">
+        </form>
+      </section>
+    </div> 
+  </main>
+  <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

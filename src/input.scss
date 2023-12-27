@@ -3,8 +3,21 @@ $dark-slate-grey: hsl(234, 29%, 20%);
 $charcoal-grey: hsl(235, 18%, 26%);
 $grey: hsl(231, 7%, 60%);
 $white: hsl(0, 0%, 100%);
+@font-face {
+    font-family: "Roboto";
+    src: url(../assets/fonts/Roboto-Regular.ttf) format("truetype");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url(../assets/fonts/Roboto-Bold.ttf) format("truetype");
+    font-weight: bold;
+}
+$roboto: "Roboto", sans-serif;
 
 @import "../node_modules/bootstrap/scss/functions";
+
+$body-bg: $dark-slate-grey;
 
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/variables-dark";
@@ -30,3 +43,56 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "../node_modules/bootstrap/scss/grid";
 @import "../node_modules/bootstrap/scss/helpers";
 @import "../node_modules/bootstrap/scss/utilities/api";
+
+html {
+    width: 100vw;
+    height:100dvh;
+    height: 100vh;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: $roboto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+
+        img {
+            margin-right: 0.75rem;
+        }
+    }
+}
+
+.row {
+    
+    section {
+
+        h1 {
+            font-size: 2.5rem;
+            font-family: $roboto;
+            font-weight: bold;
+            margin: 0.75rem 0;
+        }
+    }
+}
+
+form {
+    gap: 1.5rem;
+
+    label {
+        font-size: 0.75rem;
+        font-weight: bold;
+    }
+}
+
+input {
+    padding: 0.9rem 1.5rem;
+}
