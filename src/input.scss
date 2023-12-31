@@ -17,7 +17,7 @@ $roboto: "Roboto", sans-serif;
 
 @import "../node_modules/bootstrap/scss/functions";
 
-$body-bg: $dark-slate-grey;
+$body-bg: $charcoal-grey;
 
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/variables-dark";
@@ -71,8 +71,19 @@ ul {
     }
 }
 
+main {
+    @media (min-width: 992px) {
+        max-width: 920px !important;
+        border-radius: 1rem;
+    }
+}
+
 .row {
+    @media (min-width: 992px) {
+        height: fit-content;
+    }
     
+
     section {
 
         h1 {
@@ -80,6 +91,9 @@ ul {
             font-family: $roboto;
             font-weight: bold;
             margin: 0.75rem 0;
+            @media (min-width: 992px) {
+                font-size: 3.5rem;
+            }
         }
     }
 }
