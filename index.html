@@ -9,7 +9,7 @@
 </head>
 <body class="d-grid">
   <main class="container-sm bg-white p-0 p-lg-4 my-lg-auto">
-    <div class="row m-0 gap-lg-5">
+    <div class="row m-0 column-gap-lg-5 content">
       <picture class="p-0 mx-auto w-auto col-lg order-lg-2">
         <source srcset="assets/images/illustration-sign-up-desktop.svg" media="(min-width:992px)">
         <img src="assets/images/illustration-sign-up-mobile.svg" alt="" class="img-fluid">
@@ -31,18 +31,33 @@
           </div>
         </div>
         <form action="#" class="d-flex flex-column mt-2">
-          <div class="d-flex flex-column gap-2">
+          <div class="form-group d-flex flex-column gap-2">
             <label for="email">
               Email address
             </label>
             <input type="email" name="email" id="email" placeholder="email@company.com" required class="rounded-3 border border-grey">
           </div>
-          <input type="submit" value="Subscribe to monthly newsletter" class="bg-dark-slate-grey text-white fw-bold rounded-3">
+          <input type="submit" value="Subscribe to monthly newsletter" class="text-white fw-bold rounded-3">
         </form>
       </section>
-    </div> 
+    </div>
+    <div class="message inactive p-4 px-md-5 d-flex flex-column">
+      <div class="mt-5 pt-5 mt-lg-0 pt-lg-0">
+        <img src="assets/images/icon-success.svg" alt="" class="mt-4 pt-1 mb-3 pt-lg-0 mt-lg-0">
+      </div>
+      <div class="h-100 d-flex flex-column">
+        <section>
+          <h2 class="my-4 lh-1">Thanks for subscribing!</h2>
+          <p class="my-4">A confirmation mail has been sent to <b><span class="mail"></span></b>. Please
+            open it and click the button inside to confirm your subscription
+          </p>
+        </section>
+        <button class="text-white fw-bold rounded-3 my-lg-3">Dismiss message</button>
+      </div>
+    </div>
   </main>
   <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
